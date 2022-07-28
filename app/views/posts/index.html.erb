@@ -28,7 +28,7 @@
         <td><%= post.finish.strftime("%Y年%m月%d日") %></td>
         <td><% if post.allday == true %>
           ◯
-          <% else %>
+          <% else post.allday == false %>
           
           <% end %></td>
         <td><%= post.updated_at.to_s(:datetime_jp) %></td>
