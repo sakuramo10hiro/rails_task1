@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  start: 2022-07-25
+  finish: 2022-07-25
+  allday: false
+  memo: MyText
+
+two:
+  title: MyString
+  start: 2022-07-25
+  finish: 2022-07-25
+  allday: false
+  memo: MyText
