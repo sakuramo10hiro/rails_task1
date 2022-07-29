@@ -32,7 +32,7 @@ class PostsController < ApplicationController
       flash[:notice] = "スケジュールを更新しました"
       redirect_to :posts
     else
-      render "edit",status: :unprocessable_entity 
+      render "edit",status: :see_other
     end
   end
 
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     flash[:notice] = "スケジュールを削除しました"
-    redirect_to :posts
+    redirect_to :posts,status: :see_other
   end
 end
 

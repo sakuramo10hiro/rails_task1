@@ -31,6 +31,6 @@
    <ul>
      <li><%= link_to "スケジュール情報一覧に戻る", :posts %></li>
      <li><%= link_to "スケジュールを編集する", [:edit, @post]  %></li>
-     <li><%= link_to "スケジュールを削除する",  @post,method: :delete, data: { confirm: "本当に削除しますか？" }  %></li>
+     <li><%= link_to "スケジュールを削除する", post_path(params[:id]) , data: {turbo_method: :delete, turbo_confirm: "本当に削除しますか？"}  %></li>
    </ul>
  </div>
