@@ -9,8 +9,16 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+  
   <body>
+   <header>
+    <h1>Ruby on Rails スケジュール管理アプリ</h1>
+   </header>
+   <div class="main_container">
     <%= yield %>
+   </div> 
+   <footer>
+   <h1>現在の日時：<%= Date.current.strftime("%Y年%m月%d日") %> <%= yield :sum %> </h1>
+   </footer>
   </body>
 </html>

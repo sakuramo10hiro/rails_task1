@@ -1,0 +1,36 @@
+<h3>スケジュール詳細</h3>
+ 
+ <table>
+   <tr>
+     <th>タイトル</th>
+     <td><%= @post.title %></td>
+   </tr>
+   <tr>
+     <th>開始日</th>
+     <td><%= @post.start %></td>
+   </tr>
+   <tr>
+     <th>終了日</th>
+     <td><%= @post.finish %></td>
+   </tr>
+   <tr>
+     <th>終日</th>
+     <td><% if @post.allday == true %>
+     ◯
+     <% else @post.allday == false %>
+     
+     <% end %></td>
+   </tr>
+   <tr>
+   <th>スケジュールメモ</th>
+   <td><%= @post.memo %></td>
+ </tr>
+ </table>
+ 
+ <div>
+   <ul>
+     <li><%= link_to "スケジュール情報一覧に戻る", :posts %></li>
+     <li><%= link_to "スケジュールを編集する", [:edit, @post]  %></li>
+     <li><%= link_to "スケジュールを削除する", post_path(params[:id]) , data: {turbo_method: :delete, turbo_confirm: "本当に削除しますか？"}  %></li>
+   </ul>
+ </div>
